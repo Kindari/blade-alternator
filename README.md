@@ -3,13 +3,13 @@
 Blade Alternator is a small extension to blade that adds the common operation of changing values throughout a loop. Now thats a horrible description, so heres an example:
 
     @foreach($users as $user)
-    	<tr class="@alternator('odd', 'even')">...</tr>
+    	<tr class="@alternate('odd', 'even')">...</tr>
     @endforeach
 
 Which would result in alternating rows of a table, with the class switching between odd and even every time. This works with any number of arguments, for example, you might see a image gallery with three columns.
 
     @foreach($images as $image)
-    	<img src="{{ $img->url }}" class="@alternator('left', 'mid', 'right')" />
+    	<img src="{{ $img->url }}" class="@alternate('left', 'mid', 'right')" />
     @endforeach
 
 ## Installation
