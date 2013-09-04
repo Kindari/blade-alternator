@@ -1,0 +1,20 @@
+{
+    "name": "kindari/blade-alternator",
+    "description": "",
+    "authors": [
+        {
+            "name": "Kindari",
+            "email": "william@cahillmanley.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Kindari\\BladeAlternator": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
