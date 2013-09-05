@@ -26,9 +26,7 @@ class BladeAlternatorServiceProvider extends ServiceProvider {
 
 	public function registerAlternator() {
 
-		$this->app['blade.alternator'] = $this->app->share(function($app) {
-			return new BladeAlternator;
-		});
+		$this->app->singleton('blade.alternator', 'Kindari\BladeAlternator\BladeAlternator');
 
 	}
 

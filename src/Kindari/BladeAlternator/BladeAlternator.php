@@ -25,8 +25,8 @@ class BladeAlternator {
         }
 
         public function getKey() {
-
-        	$trace = debug_backtrace()[1];
+            $bt = debug_backtrace();
+        	$trace = $bt[1];
         	return "{$trace['file']}@{$trace['line']}";
 
         }
