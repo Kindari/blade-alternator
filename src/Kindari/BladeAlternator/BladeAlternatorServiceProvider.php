@@ -33,9 +33,7 @@ class BladeAlternatorServiceProvider extends ServiceProvider {
 	public function registerBladeExtension() {
 
 		$compiler = $this->app['view.engine.resolver']->resolve('blade')->getCompiler();
-		$compiler->extend(function($value, $blade){
-
-			$pattern = $blade->directive('alternate');
+		$compiler->directive('alernate', function($value){
 			return preg_replace($pattern, "$1<?php echo app('blade.alternator')->choose$2; ?>", $value);
 		});
 
