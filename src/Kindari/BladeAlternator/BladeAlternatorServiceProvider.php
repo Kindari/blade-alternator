@@ -35,7 +35,7 @@ class BladeAlternatorServiceProvider extends ServiceProvider {
 		$compiler = $this->app['view.engine.resolver']->resolve('blade')->getCompiler();
 		$compiler->extend(function($value, $blade){
 
-			$pattern = $blade->createMatcher('alternate');
+			$pattern = $blade->directive('alternate');
 			return preg_replace($pattern, "$1<?php echo app('blade.alternator')->choose$2; ?>", $value);
 		});
 
